@@ -6,10 +6,15 @@
     <title>Vote Page</title>
     <link rel="stylesheet" href="C:\Users\sj02093\Desktop\programming\web\voting-system\voting_system.css">
 </head>
-<body>
-    <header id="navigation_container">
-        <img src="C:\Users\sj02093\Desktop\programming\web\voting-system\pictures\school logo.png" alt="school logo">
-        <a id="home" href="#">🏠</a>
+<body
+<header id="navigation_container">
+        <div class="logo-container">
+            <img src="C:\Users\sj02093\Desktop\Voting_System\pictures\school logo.png" alt="logo">
+        </div>        
+        <a id="home" href="#"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+            </svg>
+        </a>
         <nav class="nav-links">
             <a id="login" href="#">Login</a>
             <a id="signup" href="#">Signup</a>
@@ -17,51 +22,170 @@
         </nav>
     </header>
 
-    <section id="contestants_info_container">
-        <h2>Who am I!</h2>
-        <div class="info-text">
-            <h3><i>"Today is today, thank you<br> everyone!"</i></h3>
-            <h3>-By me.</h3>
-        </div>
-        <div class="info-image">
-            <img src="images/sample1.jpg" alt="headboy">
-        </div>
-        <table>
-            <tr><td>Name:</td><td>Lonah</td></tr>
-            <tr><td>Class:</td><td>F6</td></tr>
-        </table>
-    </section>
+    <main id="main_content">
+        <div class="page-grid">
+            <div class="left-column">
+                <!-- Headboys -->
 
-    <main id="contestants_container">
-        <div class="contestant-container">
-            <div class="contestant-image">
-                <img src="images/sample2.jpg" alt="Headboy">
-            </div>
-            <div class="vote-section">
-                <button class="whoAmI">Who am I?</button>
-                <input type="checkbox" class="vote-check">
-            </div>
-        </div>
+                 <!--Headboy 1-->
+                <div class="position-group" data-position="Headboys">
+                    <h3 class="group-title">Headboys</h3>
+                    <div class="contestant-container" data-position="Headboys" data-name="headboy 1" data-class="F6" data-quote="Today is today, thank you everyone!">
+                        <div class="contestant-image">
+                            <img src="C:\Users\sj02093\Desktop\Voting_System\pictures\lonah.jpg" alt="Headboy 1">
+                        </div>
+                        <div class="vote-section">
+                            <button class="whoAmI" type="button">Who am I?</button>
+                            <label class="vote-label"><input type="radio" name="vote_headboy" class="vote-radio" value="Lonah"> Vote</label>
+                        </div>
+                    </div>
+                    <!--Headboy 2-->
+                    <div class="contestant-container" data-position="Headboys" data-name="headboy 2" data-class="F6" data-quote="Today is today, thank you everyone!">
+                        <div class="contestant-image">
+                            <img src="images/sample2.jpg" alt="Headboy 2">
+                        </div>
+                        <div class="vote-section">
+                            <button class="whoAmI" type="button">Who am I?</button>
+                            <label class="vote-label"><input type="radio" name="vote_headboy" class="vote-radio" value="headboy2"> Vote</label>
+                        </div>
+                    </div>
+                    <!--Headboy 3-->
+                    <div class="contestant-container" data-position="Headboys" data-name="headboy 3" data-class="F6" data-quote="Today is today, thank you everyone!">
+                        <div class="contestant-image">
+                            <img src="C:\Users\sj02093\Desktop\Voting_System\pictures\lonah.jpg" alt="Headboy 3">
+                        </div>
+                        <div class="vote-section">
+                            <button class="whoAmI" type="button">Who am I?</button>
+                            <label class="vote-label"><input type="radio" name="vote_headboy" class="vote-radio" value="headboy3"> Vote</label>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="contestant-container">
-            <div class="contestant-image">
-                <img src="images/sample3.jpg" alt="Headgirl">
-            </div>
-            <div class="vote-section">
-                <button class="whoAmI">Who am I?</button>
-                <input type="checkbox" class="vote-check">
-            </div>
-        </div>
+                <!-- Headgirls -->
+                <div class="position-group" data-position="Headgirl">
+                    <h3 class="group-title">Headgirl</h3>
+                    <!--Headgirl 1-->
+                    <div class="contestant-container" data-position="Headgirl" data-name="headgirl 1" data-class="F6" data-quote="I will serve with honor and dedication.">
+                        <div class="contestant-image">
+                            <img src="images/sample3.jpg" alt="Headgirl - Aisha">
+                        </div>
+                        <div class="vote-section">
+                            <button class="whoAmI" type="button">Who am I?</button>
+                            <label class="vote-label"><input type="radio" name="vote_headgirl" class="vote-radio" value="Aisha"> Vote</label>
+                        </div>
+                    </div>
+                    <!--Headgirl 2-->
+                    <div class="contestant-container" data-position="Headgirl" data-name="headgirl 2" data-class="F5" data-quote="I'll amplify student voices.">
+                        <div class="contestant-image">
+                            <img src="images/sample7.jpg" alt="Headgirl - Mary">
+                        </div>
+                        <div class="vote-section">
+                            <button class="whoAmI" type="button">Who am I?</button>
+                            <label class="vote-label"><input type="radio" name="vote_headgirl" class="vote-radio" value="Mary"> Vote</label>
+                        </div>
+                    </div>
+                    <!--Headgirl 3-->
+                    <div class="contestant-container" data-position="Headgirl" data-name="headgirl 3" data-class="F6" data-quote="Experience meets vision.">
+                        <div class="contestant-image">
+                            <img src="images/sample8.jpg" alt="Headgirl - Ruth">
+                        </div>
+                        <div class="vote-section">
+                            <button class="whoAmI" type="button">Who am I?</button>
+                            <label class="vote-label"><input type="radio" name="vote_headgirl" class="vote-radio" value="Ruth"> Vote</label>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="contestant-container">
-            <div class="contestant-image">
-                <img src="images/sample4.jpg" alt="General Secretary">
+                <!-- General Secretary -->
+                <div class="position-group" data-position="General Secretary">
+                    <h3 class="group-title">General Secretary</h3>
+                    <!--General Secretary 1-->
+                    <div class="contestant-container" data-position="General Secretary" data-name="Gs 1" data-class="F6" data-quote="Organisation and transparency first.">
+                        <div class="contestant-image">
+                            <img src="images/sample4.jpg" alt="General Secretary - Grace">
+                        </div>
+                        <div class="vote-section">
+                            <button class="whoAmI" type="button">Who am I?</button>
+                            <label class="vote-label"><input type="radio" name="vote_general_secretary" class="vote-radio" value="Grace"> Vote</label>
+                        </div>
+                    </div>
+                    <!--General Secretary 2-->
+                    <div class="contestant-container" data-position="General Secretary" data-name="Gs 2" data-class="F6" data-quote="I'll keep records accurate.">
+                        <div class="contestant-image">
+                            <img src="images/sample9.jpg" alt="General Secretary - David">
+                        </div>
+                        <div class="vote-section">
+                            <button class="whoAmI" type="button">Who am I?</button>
+                            <label class="vote-label"><input type="radio" name="vote_general_secretary" class="vote-radio" value="David"> Vote</label>
+                        </div>
+                    </div>
+                    <!--General Secretary 3-->
+                    <div class="contestant-container" data-position="General Secretary" data-name="Gs 3" data-class="F5" data-quote="Committed to clear communication.">
+                        <div class="contestant-image">
+                            <img src="images/sample10.jpg" alt="General Secretary - Njeri">
+                        </div>
+                        <div class="vote-section">
+                            <button class="whoAmI" type="button">Who am I?</button>
+                            <label class="vote-label"><input type="radio" name="vote_general_secretary" class="vote-radio" value="Njeri"> Vote</label>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="vote-section">
-                <button class="whoAmI">Who am I?</button>
-                <input type="checkbox" class="vote-check">
+
+            <!--Column to display Contestants info when WhoAmI button clicked-->
+            <div class="right-column">
+                <div class="contestants_info_container" data-position="Headboys">
+                    <h2>Headboys</h2>
+                    <div class="info-text">
+                        <h3><i>"Today is today, thank you everyone!"</i></h3>
+                        <h3>-By Lonah</h3>
+                    </div>
+                    <div class="info-image">
+                        <img src="images/sample2.jpg" alt="headboy">
+                    </div>
+                    <table>
+                        <tr><td>Name:</td><td class="info-name">Lonah</td></tr>
+                        <tr><td>Class:</td><td class="info-class">F6</td></tr>
+                    </table>
+                </div>
+
+                <div class="contestants_info_container" data-position="Headgirl">
+                    <h2>Headgirl</h2>
+                    <div class="info-text">
+                        <h3><i>"I will serve with honor and dedication."</i></h3>
+                        <h3>-By Aisha</h3>
+                    </div>
+                    <div class="info-image">
+                        <img src="images/sample3.jpg" alt="headgirl">
+                    </div>
+                    <table>
+                        <tr><td>Name:</td><td class="info-name">Aisha</td></tr>
+                        <tr><td>Class:</td><td class="info-class">F6</td></tr>
+                    </table>
+                </div>
+
+                <div class="contestants_info_container" data-position="General Secretary">
+                    <h2>General Secretary</h2>
+                    <div class="info-text">
+                        <h3><i>"Organisation and transparency first."</i></h3>
+                        <h3>-By Grace</h3>
+                    </div>
+                    <div class="info-image">
+                        <img src="images/sample4.jpg" alt="general secretary">
+                    </div>
+                    <table>
+                        <tr><td>Name:</td><td class="info-name">Grace</td></tr>
+                        <tr><td>Class:</td><td class="info-class">F6</td></tr>
+                    </table>
+                </div>
             </div>
         </div>
     </main>
+    <div class="submit-container">
+        <button id="submitVote" type="button">Submit Vote</button>
+        <div id="submitMessage" aria-live="polite"></div>
+    </div>
+
+    <script src="voting_system.js"></script>
 </body>
 </html>
