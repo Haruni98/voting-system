@@ -1,69 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="C:\Users\sj02093\Desktop\programming\web\vote\vote.js"></script>
-    <link rel="stylesheet" href="C:\Users\sj02093\Desktop\programming\web\voting-system\voting_system.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vote Page</title>
+    <link rel="stylesheet" href="C:\Users\sj02093\Desktop\programming\web\voting-system\voting_system.css">
 </head>
 <body>
-    <center>
-    <div id="navigation_container">
-        <a id="home" href="">🏠</a>
-        <a id="logout" href="">logout</a>
-        <a id="signup" href="">signup</a>
-        <a id="login" href="">login</a>
-    </div>
-    </center>
-    <div id="contestants_info_container">
-        <center><h2 style="color: orange;">Who am I!</h2></center>
-        <div style="float: right;" id="">
+    <header id="navigation_container">
+        <img src="C:\Users\sj02093\Desktop\programming\web\voting-system\pictures\school logo.png" alt="school logo">
+        <a id="home" href="#">🏠</a>
+        <nav class="nav-links">
+            <a id="login" href="#">Login</a>
+            <a id="signup" href="#">Signup</a>
+            <a id="logout" href="#">Logout</a>
+        </nav>
+    </header>
+
+    <section id="contestants_info_container">
+        <h2>Who am I!</h2>
+        <div class="info-text">
             <h3><i>"Today is today, thank you<br> everyone!"</i></h3>
             <h3>-By me.</h3>
         </div>
-        <div id="HB_image_container">
-            <img id="HB_image" src="" alt="headboy">
+        <div class="info-image">
+            <img src="images/sample1.jpg" alt="headboy">
         </div>
-        <table style="margin-top: 7px;">
-        <tr>
-            <td>Name: </td>
-            <td>Lonah</td>
-        </tr>
-        <tr>
-            <td>Class:</td>
-            <td>F6</td>
-        </tr>
+        <table>
+            <tr><td>Name:</td><td>Lonah</td></tr>
+            <tr><td>Class:</td><td>F6</td></tr>
         </table>
-    </div>
-    <div id="contestants_container">
-        <div id="HB_container">
-            <div id="HB_vote_section">
-                <button id="whoAmI_HB" onclick="showHB_info()">who am I?</button>
-                <input id="check_HB" type="checkbox">
+    </section>
+
+    <main id="contestants_container">
+        <div class="contestant-container">
+            <div class="contestant-image">
+                <img src="images/sample2.jpg" alt="Headboy">
             </div>
-            <div id="HB_image_container">
-                <img id="HB_image" src="C:\Users\sj02093\Desktop\programming\web\vote\pictures\🌼.jpg" alt="headboy">
-            </div>
-        </div>
-        <div id="HG_container">
-            <div id="HG_vote_section">
-                <button id="whoAmI_HG">who am I?</button>
-                <input id="check_HB" type="checkbox">
-            </div>
-            <div id="HG_image_container">
-                <img id="HG_image" src="C:\Users\sj02093\Desktop\programming\web\vote\pictures\download (1).jpg" alt="headgirl">
+            <div class="vote-section">
+                <button class="whoAmI">Who am I?</button>
+                <input type="checkbox" class="vote-check">
             </div>
         </div>
-        <div id="GS_container">
-            <div id="GS_vote_section">
-                <button id="whoAmI_GS">who am I?</button>
-                <input id="check_HB" type="checkbox">
+
+        <div class="contestant-container">
+            <div class="contestant-image">
+                <img src="images/sample3.jpg" alt="Headgirl">
             </div>
-            <div id="GS_image_container">
-                <img id="GS_image" src="C:\Users\sj02093\Desktop\programming\web\vote\pictures\download.jpg" alt="general Secretary">
+            <div class="vote-section">
+                <button class="whoAmI">Who am I?</button>
+                <input type="checkbox" class="vote-check">
             </div>
         </div>
-    </div>
+
+        <div class="contestant-container">
+            <div class="contestant-image">
+                <img src="images/sample4.jpg" alt="General Secretary">
+            </div>
+            <div class="vote-section">
+                <button class="whoAmI">Who am I?</button>
+                <input type="checkbox" class="vote-check">
+            </div>
+        </div>
+    </main>
 </body>
 </html>
