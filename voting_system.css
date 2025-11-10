@@ -1,128 +1,128 @@
-body{
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: serif;
+}
+
+body {
     background-color: antiquewhite;
 }
 
-#navigation_container{
-    width: 90%;
-    height: 80px;
+/* Navigation */
+#navigation_container {
+    width: 100%;
     background-color: orange;
-    display: block;
-    align-content: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
 }
-#home{
-    float: left;
-    font-family: serif;
-    text-decoration: none;
-    margin: 20px;
-    width: 100px;
-    height: 40px;
-    margin: 2px 10px 2px 0px;
-    padding: 10px 0px 10px 0px;
-    border-radius: 10px;
-    color: white;
+
+#home {
     font-size: 30px;
-}
-#login, #signup, #logout{
-    font-family: serif;
+    color: white;
     text-decoration: none;
-    float: right;
-    width: 100px;
-    height: 40px;
-    margin: 2px 8px 2px 0px;
-    padding: 20px 0px 10px 0px;
-    border-radius: 10px;
-    color: brown;
-    font-size: 20px;
 }
-#login:hover, #signup:hover, #logout:hover{
+
+.nav-links a {
+    color: brown;
+    margin-left: 15px;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
     color: white;
     background-color: rgb(248, 182, 61);
 }
-#contestants_container{
-    position: fixed;
-    top: 120px;
-    left: 5.5%;
-    width: 700px;
-    height: fit-content;
+
+/* Contestant Section */
+#contestants_container {
+    width: 90%;
+    max-width: 800px;
+    margin: 100px auto;
     background-color: aqua;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-#contestants_info_container{
-    visibility: hidden;
-    position: fixed;
-    top: 120px;
-    right:6%;
-    width: 400px;
-    height: 500px;
-}
-
-#HB_container{
-    width: 100%;
-    height: 150px;
+.contestant-container {
     background-color: aquamarine;
-    margin: 5px 0px 5px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-radius: 10px;
+    flex-wrap: wrap;
 }
 
-#HB_image_container, #HB_image{
+.contestant-image img {
     width: 150px;
     height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
 }
-#HB_vote_section, #HG_vote_section, #GS_vote_section{
-    margin: 5px 65% 5px 5px;
-    position: relative;
-    float: right;
-    display: grid;
+
+.vote-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-#whoAmI_HB, #whoAmI_HG, #whoAmI_GS{
-    border-style: none;
-    border-radius: 3px;
-    padding: 5px;
+
+.whoAmI {
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
     background-color: orange;
     color: brown;
-    
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
-#whoAmI_HB:hover, #whoAmI_HG:hover, #whoAmI_GS:hover{
+
+.whoAmI:hover {
     color: white;
     background-color: brown;
-    cursor: default;
-    animation: animate_whoAmI 3s;
-}
-@keyframes animate_whoAmI{
-    50%{transform: scale(1.1); background-color: orange;}
-    100%{transform: scale(1); background-color: brown;}
+    transform: scale(1.05);
 }
 
-#check_HB{
+.vote-check {
+    width: 30px;
+    height: 30px;
     margin-top: 10px;
-    width: 50px;
-    height: 50px;
-}
-#check_HB:checked{
-
 }
 
-#HG_container{
-    width: 100%;
-    height: 150px;
-    background-color: aquamarine;
-    margin: 5px;
-    margin: 5px 0px 5px 0px;
+/* Info Container */
+#contestants_info_container {
+    max-width: 400px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px auto;
+    text-align: center;
 }
 
-#HG_image_container, #HG_image{
+#contestants_info_container img {
     width: 150px;
     height: 150px;
+    border-radius: 10px;
+    margin-top: 10px;
 }
 
-#GS_container{
-    width: 100%;
-    height: 150px;
-    background-color: aquamarine;
-    margin: 5px;
-    margin: 5px 0px 5px 0px;
-}
-
-#GS_image_container, #GS_image{
-    width: 150px;
-    height: 150px;
+/* Responsive */
+@media (max-width: 768px) {
+    #navigation_container {
+        flex-direction: column;
+    }
+    .contestant-container {
+        flex-direction: column;
+        text-align: center;
+    }
 }
