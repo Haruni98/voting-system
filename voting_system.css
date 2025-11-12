@@ -24,6 +24,7 @@ body {
     flex-wrap: wrap;
     align-items: center;
     padding: 10px 30px;
+    border-radius: 0px 0px 5px 5px;
 }
 .logo-container{
     width: 250px;
@@ -249,4 +250,114 @@ display: block;
 .group-title {
     color: brown;
     margin: 6px 0 8px;
+}
+
+.site-footer{
+    background-color: orange; /* orange tone */
+    color: brown; /* dark brown text */
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    padding: 20px 0 32px;
+}
+
+.footer-content{
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 260px 220px;
+    gap: 24px;
+    align-items: start;
+}
+
+.footer-column{
+    background: transparent;
+}
+
+.footer-comments{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#commentInput{
+    width: 100%;
+    min-height: 80px;
+    background-color: antiquewhite;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-weight: 500;
+    resize: vertical;
+}
+
+.comment-actions{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+#submitComment{
+    background-color: brown; /* brown */
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+button.secondary{
+    color: white;
+    background-color: brown;
+    font-weight: bold;
+    border: 1px solid rgba(0,0,0,0.08);
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.comments-list{
+    margin-top: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.comments-list .comment-item{
+    background: rgba(255,255,255,0.7);
+    padding: 8px 10px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.footer-info p,
+.footer-dev p{ margin: 6px 0; }
+
+.footer-info a{ color: #3b1f00; text-decoration: underline; }
+
+.back-to-top{
+    display: inline-block;
+    margin-top: 6px;
+    color: #3b1f00;
+    text-decoration: none;
+}
+
+/* small screens: stack footer columns */
+@media (max-width: 880px){
+    .footer-content{ grid-template-columns: 1fr; }
+    .footer-content { gap: 16px; }
+}
+
+/* utility: visually hidden for screen-reader-only labels */
+.sr-only{
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0,0,0,0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
 }
